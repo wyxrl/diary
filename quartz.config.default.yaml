@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: wyxrl.github.io/diary
   ignorePatterns:
     - private
     - templates
