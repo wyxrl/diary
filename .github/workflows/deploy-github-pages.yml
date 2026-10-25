@@ -39,7 +39,15 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
-
+              - name: Debug build output
+          if: always()
+          run: |
+            echo "=== Root ==="
+            ls -la
+            echo "=== public ==="
+            ls -la public || true
+            echo "=== HTML/XML files ==="
+            find public -maxdepth 3 -type f \( -name '*.html' -o -name '*.xml' \) | head -100
   deploy:
     environment:
       name: github-pages
